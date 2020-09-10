@@ -44,8 +44,9 @@ button = driver.find_element_by_xpath("//button[@id='getFactorial']").click()
 time.sleep(5)
 
 result_text = driver.find_element_by_xpath("//p[@id='resultDiv']")
-words = result_text.text
-words = words.split()
+#result_message is a variable which stores the message "Factorial of x is y"
+result_message = result_text.text
+result_message = result_message.split()
 print(words)
 
 
