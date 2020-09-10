@@ -22,24 +22,24 @@ driver.get("http://weathershopper.pythonanywhere.com/")
 # Find the Example table element in the page
 temperature = driver.find_element_by_xpath("//span[@id='temperature']")
 temperature = temperature.text
+temperature = temperature.split()
 
-temperature = "temperature[0]" + "temperature[1]"
-print(temperature)
-inttemperature = int(temperature)
+print(temperature[-2])
+inttemperature = int(temperature[-2])
 #if else condition to determine display of Moisturizer or Suncreen page
 
-if temperature  < 19:
+if inttemperature  < 19:
     submit = driver.find_element_by_xpath("//button[contains(.,'Buy moisturizers')]")
     submit.click()
-    time.sleep(3)
+    time.sleep(1)
     driver.get("http://weathershopper.pythonanywhere.com/moisturizer")
-    print("cold moisturizer")
+    #print("cold moisturizer")
 else:
     submit = driver.find_element_by_xpath("//button[contains(.,'Buy sunscreens')]")
     submit.click()
-    time.sleep(3)
+    time.sleep(1)
     driver.get("http://weathershopper.pythonanywhere.com/sunscreen")
-    print("Hot sunscreen")
+    #print("Hot sunscreen")
 
 # Close the browser       
 driver.close()
