@@ -47,12 +47,12 @@ result_text = driver.find_element_by_xpath("//p[@id='resultDiv']")
 #result_message is a variable which stores the message "Factorial of x is y"
 result_message = result_text.text
 result_message = result_message.split()
-print(words)
+print(result_message)
 
 
-print(type(words[-1]))
+print(type(result_message[-1]))
     
-if int(words[-1]) == expected_result:
+if int(result_message[-1]) == expected_result:
     print("Sucessfully executed the arithmetic")
 else:
     print("Arithmetic calculation is incorrect")
