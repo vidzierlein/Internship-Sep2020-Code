@@ -3,7 +3,7 @@ SCOPE:
 1) Launch Chrome driver
 2) Navigate to http://weathershopper.pythonanywhere.com/
 3) Determine the temperature from this page
-4)Shop for moisturizers if the weather is below 19 degrees. Shop for suncreens if the weather is above 34 degrees.
+4) Shop for moisturizers if the weather is below 19 degrees. Shop for suncreens if the weather is above 34 degrees.
 5) Validate if it has landed on the right page.
 6) Take a screenshot
 7) Close the browser
@@ -44,8 +44,8 @@ if inttemperature  < 19:
         print("Successful navigation to the Moisturizer page")
 
         addToCart = (driver.find_elements_by_xpath('//button[@class="btn btn-primary"]'))
-        for all in addToCart:
-            all.click()
+        for each in addToCart:
+            each.click()
         print("cold moisturizer")
     else:
         print(" Please check the Moisturizer page URL again")
