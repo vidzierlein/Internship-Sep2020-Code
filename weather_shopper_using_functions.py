@@ -84,8 +84,10 @@ product_prices)
 for each_condition in product_name.lower():
     for product_name, product_price in zip(product_names, product_prices):
         if product_price < min_price:
+            print(product_price)
             min_price = product_price
             min_name = product_name
+            print(product_name)
             min_name = "'"+min_name+"'"
             print(min_price,min_name, "success")        
 
