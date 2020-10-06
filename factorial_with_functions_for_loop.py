@@ -20,7 +20,11 @@ def print_factorial_list():
     factorial = calculate_factorial(number)
     print("The factorial of %d  = %d" %(number, factorial))
     return(factorial)
-
+def factorial(num):
+        fac=1
+    if num!=0:
+        fac= ((fac*i) for i in range(1,number+1)) 
+    return fac
     
 if __name__ == "__main__":
     print_factorial_list()
