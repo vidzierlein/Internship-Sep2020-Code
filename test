@@ -1,0 +1,7 @@
+import time
+from selenium import webdriver
+
+   # Create an instance of Chrome WebDriver
+browser = webdriver.Firefox()
+    # Maximize the browser window
+browser.maximize_window()
