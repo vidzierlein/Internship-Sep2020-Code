@@ -132,9 +132,9 @@ if __name__ == "__main__":
         if int(product_price_cart) == product_price:
             print("Product prices are matching")
          
-        if (product_name_cart) == product_name
+        if (product_name_cart) == product_name:
             if (product_price_cart == product_price):
-            print("x")
+                print("x")
             if product_price_cart == product_price:
                 print("Y")
                 print("Cart verified")

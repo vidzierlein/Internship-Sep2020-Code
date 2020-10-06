@@ -19,6 +19,14 @@ driver.maximize_window()
 # Navigate to Weather Shopper page      
 driver.get("http://weathershopper.pythonanywhere.com/")
 
+buy_sunscreen_button = driver.find_element_by_xpath("//button[contains(.,'Buy sunscreens')]")
+if buy_sunscreen_button.is_displayed(): 
+    print("Buy Sunscreen button is displayed")
+
+buy_moistuzier_button = driver. find_element_by_xpath( "//button[contains(.,'Buy moisturizers')]")
+if buy_moistuzier_button.is_displayed():
+    print("Buy Moisturizer button is displayed")
+
 # Find the Example table element in the page
 temperature = driver.find_element_by_xpath("//span[@id='temperature']")
 temperature = temperature.text
@@ -41,10 +49,7 @@ else:
     driver.get("http://weathershopper.pythonanywhere.com/sunscreen")
     #print("Hot sunscreen")
 
-# Close the browser       
-driver.close()
-
-''' # Create a list to store the text
+# Create a list to store the text
 result_data = []
 # Go to each row and get the no of columns and the navigate to column 
 # Then get the text from each column
@@ -98,8 +103,5 @@ else:
 
 # Pause the script for 3 sec
 time.sleep(3)
-
 # Close the browser       
 driver.close()
-        
- '''
