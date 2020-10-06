@@ -89,25 +89,24 @@ if __name__ == "__main__":
     #browser.get("http://qxf2.com")
     page_title = 'Current Temperature'
 
-    ''' result_check_title = check_title(page_title)
+    '''result_check_title = check_title(page_title)
     if result_check_title == True:
-        print("The title is verified and the test case is passed")
+        print("The page title is verified")
     else:
-        print("The title is not matching something went wrong please check ,your test is failed")
- '''
+        print("The title is not matching something went wrong please check ,your test is failed")'''
+ 
     current_temperature = read_temperature()
+    time.sleep(1)
     if check_temperature(current_temperature) == "Moisturizer":
         product_condition = ['aloe','almond']
     else:
         product_condition = ['SPF-50', 'SPF-30']
 
     for each_condition in product_condition:
-        print(each_condition)
         product_name,product_price = add_to_cart(each_condition)
-        print(" The product %s with %s has been added in to the cart "%(product_name,product_price))
-    print(product_name, product_price)
+        print("%s at a price of Rs.%s has been added in to the cart "%(product_name,product_price))
 
-    time.sleep(3)
+    time.sleep(1)
     cart = browser.find_element_by_xpath("//button[@class='thin-text nav-link']")
     cart.click()
 
@@ -115,34 +114,18 @@ if __name__ == "__main__":
     cart_items = table.find_elements_by_xpath("//tbody/descendant::tr")
     
     for every_tr in cart_items:
-        print(every_tr.text)
-        print("** under cart 1st loop")
         product_name_cart = every_tr.find_element_by_xpath('.//td[1]').text
-        print(">>>>", product_name_cart)
         product_price_cart = every_tr.find_element_by_xpath(".//td[2]").text
-        print("product_name_cart", product_name_cart)
-        print("product_price_cart", product_price_cart)
-        print("????",product_price)
-        print("^^^^", product_name)
-        print(type(product_price_cart))
-        print(type(product_price))
-        print(type(product_name_cart))
-        print(type(product_name))
         product_name_cart = "'"+product_name_cart+"'"
-        if int(product_price_cart) == product_price:
-            print("Product prices are matching")
-         
-        if (product_name_cart) == product_name:
-            if (product_price_cart == product_price):
-                print("x")
-            if product_price_cart == product_price:
-                print("Y")
+        if product_name_cart == product_name:
+            if int(product_price_cart) == product_price:
                 print("Cart verified")
-            #product_price_cart += total
 
-                print("*****")
-            #print(product_names_cart, product_prices_cart)
-        print("test is passed")
-
-    #for product_price_cart in 
-    browser.close()
+    pay_with_card = browser.find_element_by_xpath("//span[contains(.,'Pay with Card')]")
+    pay_with_card.click()
+    #print("pay_with_card clciked")
+    time.sleep(2)
+    
+    
+    payment_success = browser.find_element_by_xpath( "//h2[contains(.,'PAYMENT SUCCESS')]")            
+browser.close()
