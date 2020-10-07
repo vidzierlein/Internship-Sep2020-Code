@@ -88,12 +88,15 @@ if __name__ == "__main__":
     browser.get("http://weathershopper.pythonanywhere.com")
     #browser.get("http://qxf2.com")
     page_title = 'Current Temperature'
+<<<<<<< HEAD
+=======
 
     '''result_check_title = check_title(page_title)
     if result_check_title == True:
         print("The page title is verified")
     else:
         print("The title is not matching something went wrong please check ,your test is failed")'''
+>>>>>>> master
  
     current_temperature = read_temperature()
     time.sleep(1)

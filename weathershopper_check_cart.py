@@ -135,6 +135,15 @@ if __name__ == "__main__":
         if (product_name_cart) == product_name:
             if (product_price_cart == product_price):
                 print("x")
+
+        if (product_name_cart) == product_name and (product_price_cart == product_price):
+            print("x")
+
+
+        if (product_name_cart) == product_name:
+            if (product_price_cart == product_price):
+                print("x")
+
             if product_price_cart == product_price:
                 print("Y")
                 print("Cart verified")

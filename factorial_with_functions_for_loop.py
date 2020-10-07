@@ -11,9 +11,8 @@ def calculate_factorial(number):
             return math.factorial(number) """
     factorial = 1
     for number in range(1,number+1):
-        
-        factorial = product * number
-    return product
+        factorial = factorial * number
+    return factorial
 
 def print_factorial_list(): 
     "print the factorial of the given number"
