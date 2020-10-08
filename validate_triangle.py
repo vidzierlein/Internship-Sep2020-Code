@@ -20,8 +20,6 @@ class validateTriangle:
         else: 
             print("This is not a traingle")  
             return False
-               
-
 
 validateTriangle_one = validateTriangle(30, 20, 40)
 validateTriangle_one.checkValidity()
