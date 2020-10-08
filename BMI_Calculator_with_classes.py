@@ -31,3 +31,8 @@ calculate_my_bmi_one = calculate_my_bmi()
 calculate_my_bmi_one.user_input()
 calculate_my_bmi_one.calculate_bmi()
 calculate_my_bmi_one.check_bmi_range()
+
+calculate_my_bmi_two = calculate_my_bmi()
+calculate_my_bmi_two.user_input()
+calculate_my_bmi_two.calculate_bmi()
+calculate_my_bmi_two.check_bmi_range()
